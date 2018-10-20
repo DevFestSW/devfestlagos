@@ -1,0 +1,169 @@
+[debug] [2018-10-20T10:21:31.504Z] ----------------------------------------------------------------------
+[debug] [2018-10-20T10:21:31.506Z] Command:       /usr/local/bin/node /Library/WebServer/Documents/gdg/2018/devfestlagos/node_modules/.bin/firebase deploy
+[debug] [2018-10-20T10:21:31.506Z] CLI Version:   3.19.3
+[debug] [2018-10-20T10:21:31.506Z] Platform:      darwin
+[debug] [2018-10-20T10:21:31.506Z] Node Version:  v10.10.0
+[debug] [2018-10-20T10:21:31.507Z] Time:          Sat Oct 20 2018 11:21:31 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:31.507Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-20T10:21:31.514Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-20T10:21:31.515Z] > authorizing via signed-in user
+[debug] [2018-10-20T10:21:31.516Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-20T10:21:31.516Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/mpPYAAffADw1JjuTI5GZ49NBTJ3vdCG57gsvY-t37kA',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Oct 20 2018 11:21:31 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:31.997Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:21:32.003Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/devfestlagos18  
+  
+ Sat Oct 20 2018 11:21:32 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:33.120Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:21:33.121Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/devfestlagos18/tokens  
+  
+ Sat Oct 20 2018 11:21:33 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:34.028Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'devfestlagos18'...
+[info] 
+[info] i  deploying database, firestore, functions, hosting
+[info] Running command: npm run predeploy
+[info] Running command: npm --prefix ./functions run build
+[info] ✔  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-10-20T10:21:47.816Z] >>> HTTP REQUEST PUT https://devfestlagos18.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+ 
+ Sat Oct 20 2018 11:21:47 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:48.993Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database devfestlagos18 is valid
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-10-20T10:21:48.996Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/devfestlagos18:test  
+ { source: { files: [ [Object] ] } } 
+ Sat Oct 20 2018 11:21:48 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:51.551Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-10-20T10:21:51.553Z] > [functions] package.json contents: {
+  "name": "hoverboard-functions",
+  "description": "Hoverboard serverless functions",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist --source-maps",
+    "postbuild": "cpx ../build/index.html dist/"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^1.6.0",
+    "child-process-promise": "^2.2.1",
+    "cpx": "^1.5.0",
+    "express": "^4.16.3",
+    "firebase-admin": "^5.12.0",
+    "firebase-functions": "^1.0.1",
+    "md5": "^2.2.1",
+    "mkdirp-promise": "^5.0.1",
+    "moment": "^2.22.0",
+    "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.54",
+    "rimraf": "^2.6.2"
+  }
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-10-20T10:21:51.553Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/devfestlagos18?view=CONSUMER_VIEW  
+  
+ Sat Oct 20 2018 11:21:51 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:51.554Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/devfestlagos18?view=CONSUMER_VIEW  
+  
+ Sat Oct 20 2018 11:21:51 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:53.807Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:21:53.843Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-10-20T10:21:53.844Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/devfestlagos18  
+  
+ Sat Oct 20 2018 11:21:53 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:55.575Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:21:55.576Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/704042474323:getServerAppConfig  
+  
+ Sat Oct 20 2018 11:21:55 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:57.438Z] <<< HTTP RESPONSE 200
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-10-20T10:21:57.447Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/devfestlagos18/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Sat Oct 20 2018 11:21:57 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:57.448Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/devfestlagos18/databases/(default)/indexes  
+  
+ Sat Oct 20 2018 11:21:57 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:21:58.751Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:21:58.757Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:21:58.758Z] [rules] created ruleset projects/devfestlagos18/rulesets/4ae5064f-00e8-4d30-bddf-91fa325028c2
+[info] i  functions: preparing functions directory for uploading...
+[info] i  functions: packaged functions (135.8 KB) for uploading
+[debug] [2018-10-20T10:22:05.707Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/devfestlagos18/locations/us-central1/functions:generateUploadUrl  
+  
+ Sat Oct 20 2018 11:22:05 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:22:06.531Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T10:22:06.533Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-e4a4edce-ec36-4ec8-9575-2d27b6ea205b/08d20814-9c2f-4f47-bfda-b64dd27e3256.zip?GoogleAccessId=service-704042474323@gcf-admin-robot.iam.gserviceaccount.com&Expires=1540032722&Signature=RWFZBr8rxDFnOf4LOaHLYDn7wnA0xgEQCm%2FKXtmdokv0w9gDxyCdiIIzi6Zaj3QtVYsJCL3qCuzgWMphsG5twAFjEdrO4EeVhcRvWbHuNl8hpT%2BWRRNWuGyht6T1hAi33BoqhQFR8myndJy9zI%2FcA%2FQ%2FQo%2BWailnx8hVf3ZUJbMmVvtfrP92gOsgIGQN0LSKx2xZjmMJbotBDyHIu%2BqCHatvMba3ct9g4mwdEdncCqEo%2BFqRJJ4MYHwYMMVkbec7FwQfCtiN44LtBeVpFPhTDuCPtAe5An1CSRGyaHgUcK5zawaoTXMp9DhBsHOa2c%2Bv3DNo%2BIecPG0by4IUNd826A%3D%3D  
+ ReadStream {
+  _readableState:
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { length: 2 },
+     length: 117119,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: false,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     emitClose: false,
+     destroyed: false,
+     defaultEncoding: 'utf8',
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path:
+   '/var/folders/rj/jcz_jkjd3874vgngbpqqnnm00000gn/T/firebase-functions-88210Z5z1dnb1ctpZ.zip',
+  fd: 25,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: Infinity,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 117119,
+  closed: false } 
+ Sat Oct 20 2018 11:22:06 GMT+0100 (West Africa Standard Time)
+[debug] [2018-10-20T10:22:07.793Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[info] i  hosting: preparing ./build directory for upload...
+[debug] [2018-10-20T10:22:18.736Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/devfestlagos18/uploads/-LPFzhblIR7JtT4J4KbQ?fileCount=99&message=  
+  
+ Sat Oct 20 2018 11:22:18 GMT+0100 (West Africa Standard Time)
