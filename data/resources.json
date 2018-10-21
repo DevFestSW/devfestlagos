@@ -89,11 +89,11 @@
     "statisticsBlock": {
       "attendees": {
         "label": "Attendees",
-        "number": "2,000!"
+        "number": "2,000"
       },
       "days": {
-        "label": "Day",
-        "number": "1"
+        "label": "Hours",
+        "number": "9+"
       },
       "sessions": {
         "label": "Sessions",
@@ -229,8 +229,8 @@
         }
       },
       {
-        "title": "What is GDG?",
-        "description": "Google Developers Group (GDG) - is open and volunteer geek community who create exciting projects and share experience about Google technologies with a passion",
+        "title": "Sessions",
+        "description": "This event will feature talks from high profiled speakers from within Nigeria and across Africa in areas including Android, Firebase, Flutter, Google Cloud Platform, Google Assistant, Internet of Things, Machine Learning, Mobile Web and Artificial Intelligence",
         "callToAction": {
           "label": "Read more",
           "link": "https://developers.google.com/groups/",
