@@ -54,8 +54,8 @@
     },
     "speakers": {
       "title": "Speakers",
-      "metaDescription": "Hear from the Googlers, Partners, and Guest Speakers who are building the future with Cloud, Web, Android and Machine Learning. Check back often as we add more speakers, including our customers and partners.",
-      "description": "Hear from the Googlers, Partners, and Guest Speakers who are building the future with Cloud, Web, Android and Machine Learning. Check back often as we add more speakers, including our customers and partners.",
+      "metaDescription": "Hear from the Googlers, Partners, and Guest Speakers who are building the future with Cloud, Web, Android and Machine Learning. Check back often as we add more speakers, including our partners.",
+      "description": "Hear from the Googlers, Partners, and Guest Speakers who are building the future with Cloud, Web, Android and Machine Learning. Anticipate amazing sessions from our speakers! Check back to see as we add more partners.",
       "background": {
         "color": "#FFF"
       },
