@@ -22,10 +22,20 @@
         margin: 24px 0 8px;
       }
 
+      .l{
+         /* align-content: center !important;  */
+         justify-items: center !important;
+         /* text-align: center !important; */
+      }
+      
+
       .logos-wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        grid-gap: 8px;
+        grid-gap: 30px;
+        /* align-self: center !important; */
+        justify-self: center !important;
+        /* text-align: center !important; */
       }
 
       .logo-item {
@@ -56,11 +66,11 @@
 
     </style>
 
-    <div class="container">
+    <div class="container l">
       <h1 class="container-title">{$ partnersBlock.title $}</h1>
 
       <template is="dom-repeat" items="[[partners]]" as="block">
-          <h4 class="block-title">[[block.title]]</h4>
+          <h3 class="block-title">[[block.title]]</h3>
           <div class="logos-wrapper">
             <template is="dom-repeat" items="[[block.items]]" as="logo">
               <a
@@ -83,11 +93,12 @@
           </div>
       </template>
 
-      <paper-button class="cta-button animated icon-right"
-        on-tap="_addPotentialPartner">
+      <!-- on-tap="_addPotentialPartner" -->
+      <a href="https://bit.ly/devfestlagos18-sponsor" target="_blank"><paper-button class="cta-button animated icon-right"
+        >
         <span>{$ partnersBlock.button $}</span>
         <iron-icon icon="hoverboard:arrow-right-circle"></iron-icon>
-      </paper-button>
+      </paper-button></a>
     </div>
 
   </template>
